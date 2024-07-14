@@ -1,0 +1,69 @@
+.hero {
+  height: 92vh;
+  background-color: black;
+  color: var(--nav-font-color);
+  display: flex;
+}
+
+.black-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 0 80px;
+}
+
+.black-child * {
+  color: beige;
+}
+
+.black-child h1 {
+  font-family: var(--hero-main-rubik);
+  font-size: 4rem;
+  width: 60%;
+}
+
+.black-child p {
+  font-family: var(--hero-main-rubik);
+  font-size: 1.5vw;
+  width: 60%;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.hero-name {
+  color: var(--nav-font-color);
+}
+
+.yellow-child {
+  width: 30%;
+  background-color: var(--nav-font-color);
+}
+
+.hero-image {
+  position: absolute;
+  height: 50vh;
+  top: 25vh;
+  left: 67%;
+  z-index: 2;
+}
+
+.hero-curve1 {
+  position: absolute;
+  top: 15vh;
+  height: 80vh;
+  left: 60%;
+  z-index: 1;
+}
+
+.image-container img {
+  transition: 0.8s;
+}
+
+.image-container:hover .hero-curve1 {
+  left: 59%;
+}
+
+.image-container:hover .hero-image {
+  top: 22vh;
+}
