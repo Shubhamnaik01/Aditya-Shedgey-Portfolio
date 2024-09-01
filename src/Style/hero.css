@@ -1,6 +1,6 @@
 .hero {
   height: 92vh;
-  background-color: black;
+  background-color: var(--nav-color);
   color: var(--nav-font-color);
   display: flex;
 }
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px 0 80px;
+  padding: 0 4vw 0 5vw;
 }
 
 .black-child * {
@@ -23,10 +23,16 @@
   width: 60%;
 }
 
-.black-child p {
+.black-child button {
   font-family: var(--hero-main-rubik);
-  font-size: 1.5vw;
-  width: 60%;
+  border: 2px solid var(--nav-font-color);
+  background-color: black;
+  font-size: 1.2vw;
+  font-weight: 600;
+  padding: 2vh 2vh 2vh 2vh;
+  border-radius: 10px;
+  /* width: 16%; */
+  /* flex-basis: 0; */
   margin-top: 10px;
   text-align: justify;
 }
@@ -60,10 +66,133 @@
   transition: 0.8s;
 }
 
+.typing-parent {
+  position: relative;
+}
+
+.typeing {
+  color: var(--nav-color);
+  height: 100%;
+  /* width: 100%; */
+  background-color: var(--nav-color);
+  border-right: 2px solid var(--nav-font-color);
+  display: inline-block;
+  /* width: 30%; */
+  position: absolute;
+  margin: 0 auto;
+  animation: typing 4s steps(60, end) infinite, blink-caret 2s step-end infinite;
+  /* z-index: 10; */
+}
+
 .image-container:hover .hero-curve1 {
   left: 59%;
 }
 
 .image-container:hover .hero-image {
   top: 22vh;
+}
+
+.black-child button:hover {
+  background-color: var(--nav-font-color);
+  color: var(--nav-color);
+}
+
+.sideBarItems:hover {
+  background-color: aliceblue;
+}
+
+@media (max-width: 950px) {
+  .hero {
+    flex-direction: column;
+  }
+  .black-child {
+    padding: 0 6vw 0 6vw;
+    width: auto;
+    text-align: center;
+  }
+  .black-child h1 {
+    font-size: 3.5rem;
+    align-items: center;
+    width: auto;
+    /* position: absolute; */
+  }
+  .yellow-child {
+    display: none;
+  }
+  .hero-curve1 {
+    display: none;
+  }
+  .image-container {
+    height: 40%;
+    width: 100%;
+    position: relative;
+    /* overflow: hidden; */
+  }
+  .hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    object-fit: contain;
+  }
+
+  .black-child button {
+    font-size: 4vw;
+    margin-top: 15px;
+  }
+  .hero {
+    justify-content: center;
+    gap: 2rem;
+  }
+  .no-hover {
+    pointer-events: none;
+  }
+}
+@media (max-width: 550px) {
+  .black-child h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    gap: 2.5rem;
+  }
+  .image-container {
+    height: 30%;
+  }
+  .black-child button {
+    /* font-size: 4vw; */
+    margin-top: 25px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 100%;
+    /* background-color: var(--nav-color); */
+  }
+  to {
+    width: 0%;
+    /* background-color: var(--nav-color); */
+  }
+}
+
+@keyframes words {
+  50% {
+    content: "Video Editor";
+  }
+  100% {
+    content: "Animator";
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
