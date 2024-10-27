@@ -2,7 +2,7 @@ import "../Style/skill.css";
 
 function Skill() {
   return (
-    <div className="parent-skill">
+    <div className="parent-skill" id="skillID">
       <h1 className="slider-title">
         My <span>Skills</span>
       </h1>

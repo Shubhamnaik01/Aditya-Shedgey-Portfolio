@@ -1,4 +1,5 @@
 import "../Style/nav.css";
+import { Link } from "react-router-dom";
 
 function showSideBar(e) {
   let sidebarButton = document.getElementsByClassName("sidebar")[0];
@@ -11,13 +12,37 @@ function hideSideBar(e) {
   e.preventDefault();
 }
 
+function navigateAbout(e) {
+  document.getElementById("aboutID").scrollIntoView({ behavior: "smooth" });
+  e.preventDefault();
+  hideSideBar();
+}
+function navigateSkills(e) {
+  document.getElementById("skillID").scrollIntoView({ behavior: "smooth" });
+  e.preventDefault();
+  hideSideBar();
+}
+function navigateContact(e) {
+  document
+    .getElementsByClassName("parent-contact")[0]
+    .scrollIntoView({ behavior: "smooth" });
+  e.preventDefault();
+  hideSideBar();
+}
+function navigateHome(e) {
+  document
+    .getElementsByClassName("hero")[0]
+    .scrollIntoView({ behavior: "smooth" });
+  e.preventDefault();
+  hideSideBar();
+}
 function Nav() {
   return (
     // <>
     <nav className="navbar">
       <h2 className="nav-logo">Aditya Shedge</h2>
-      <ul className="nav-bar-ul sidebar" onClick={hideSideBar}>
-        <li>
+      <ul className="nav-bar-ul sidebar">
+        <li onClick={hideSideBar}>
           <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,39 +55,53 @@ function Nav() {
             </svg>
           </a>
         </li>
-        <li className="sideBarItems">
-          <a href="">Home</a>
+        <li className="sideBarItems" onClick={navigateHome}>
+          <a href="" onClick={navigateHome}>
+            Home
+          </a>
         </li>
         <li className="sideBarItems">
-          <a href="">About me</a>
+          <a href="" onClick={navigateAbout}>
+            About me
+          </a>
         </li>
-        <li className="sideBarItems">
+        <li className="sideBarItems" onClick={navigateSkills}>
           <a href="">Skills</a>
         </li>
-        <li className="sideBarItems">
+        {/* <li className="sideBarItems">
           <a href="">Projects</a>
-        </li>
-        <li className="sideBarItems">
-          <a href="">Contact</a>
+        </li> */}
+        <li className="sideBarItems" onClick={navigateContact}>
+          <a href="" onClick={navigateContact}>
+            Contact
+          </a>
         </li>
       </ul>
-      <ul className="nav-bar-ul" onClick={showSideBar}>
+      <ul className="nav-bar-ul">
         <li className="hideOnMobile">
-          <a href="">Home</a>
+          <a href="/" onClick={navigateHome}>
+            Home
+          </a>
         </li>
         <li className="hideOnMobile">
-          <a href="">About me </a>
+          <a href="" onClick={navigateAbout}>
+            About me
+          </a>
         </li>
         <li className="hideOnMobile">
-          <a href="">Skills</a>
+          <a href="" onClick={navigateSkills}>
+            Skills
+          </a>
         </li>
-        <li className="hideOnMobile">
+        {/* <li className="hideOnMobile">
           <a href="">Projects</a>
-        </li>
+        </li> */}
         <li className="hideOnMobile">
-          <a href="">Contact</a>
+          <a href="" onClick={navigateContact}>
+            Contact
+          </a>
         </li>
-        <li className="sidebar-button-menu">
+        <li className="sidebar-button-menu" onClick={showSideBar}>
           <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"

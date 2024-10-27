@@ -91,6 +91,12 @@ nav {
   .nav-logo {
     font-size: 2vh;
   }
+  .sidebar li {
+    padding: 10px 0;
+  }
+  .sidebar li a {
+    padding: 10px 0;
+  }
 }
 @media (max-width: 550px) {
   .hideOnMobile {

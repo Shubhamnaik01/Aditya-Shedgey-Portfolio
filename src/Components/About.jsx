@@ -2,7 +2,7 @@ import "../Style/about.css";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="aboutID">
       <div className="parent-about">
         <h1>
           <span>About</span> Me

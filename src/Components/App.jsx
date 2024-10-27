@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Skill from "./Skills";
 import Contact from "./Contact";
+import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
 function App() {
   return (
     <>
