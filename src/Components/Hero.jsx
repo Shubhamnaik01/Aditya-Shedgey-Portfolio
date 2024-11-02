@@ -58,7 +58,11 @@ function Hero() {
           captivate audiences.
         </p> */}
         <div>
-          <button>Download CV</button>
+          {/* <button> */}
+          <a href="/Aditya-2.pdf" download>
+            Download CV
+          </a>
+          {/* </button> */}
         </div>
       </div>
       <div className="yellow-child"></div>
